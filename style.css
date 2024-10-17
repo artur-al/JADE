@@ -415,6 +415,8 @@ body {
     nav {
         width: 90%;
         justify-content: space-evenly;
+        background-color: #005C4B;
+        border-radius: 15px;
     }
 
     /* Reduz o tamanho dos elementos do carrossel */
@@ -454,19 +456,15 @@ body {
         height: auto;
     }
 
-    /* Reduzir o tamanho da logo em 50% */
     #title img {
-        width: 50%;
-        /* Reduz a largura da logo para 50% */
-        height: auto;
-        /* Mantém a proporção da imagem */
+       display: none;
     }
 
     /* Ajustar espaçamento do texto em .projeto p */
     .projeto p {
-        margin-top: 20px;
+        margin-top: 10px;
         /* Adiciona um espaçamento maior no topo */
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         /* Adiciona um espaçamento maior na parte inferior */
         font-size: 0.9em;
         /* Ajusta o tamanho da fonte, se necessário */
