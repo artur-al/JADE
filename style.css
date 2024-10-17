@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -52,7 +52,90 @@ header nav a {
     color: #eee;
     margin-top: -50px;
     position: relative;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --fundo: #e1dad0;
+    --clr: #222;
+}
+
+body {
+    background-color: var(--fundo);
+    margin: 0;
+    font-family: Poppins;
+    font-size: 15px;
+}
+
+/* --- Logo Atualizado --- */
+header .logo img {
+    height: 50px;
+    /* Reduzido pela metade */
+}
+
+/* --- Header Atualizado --- */
+header {
+    width: 1140px;
+    max-width: 90%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    padding: 10px;
+    /* Adicionado padding para evitar que a logo fique muito próxima da nav */
+}
+
+/* --- Navbar Atualizado --- */
+header nav {
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+    /* Adicionado margin-right para afastar a nav das bordas da tela */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+}
+
+/* --- Responsividade para evitar que elementos excedam o tamanho da tela --- */
+body {
+    overflow-x: hidden;
+    /* Evita que elementos extrapolem o limite horizontal da tela */
+}
+
+/* --- Projetos Atualizado --- */
+.projeto {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+    background: var(--fundo);
+    color: #000;
+    margin: 5%;
+    margin-bottom: 20px;
+    /* Adicionada margin-bottom para evitar sobreposição de elementos */
+}
+
+.carousel {
+    width: 100%;
+    background-color: #555;
+    height: 720px;
+    color: #eee;
+    margin-top: -50px;
+    position: relative;
+}
+
 
 .carousel .list {
     width: 100%;
@@ -86,7 +169,7 @@ header nav a {
     z-index: -1;
 }
 
-.carousel .list .item .image {
+/* .carousel .list .item .image {
     flex-shrink: 0;
     width: 300px;
     height: 525px;
@@ -103,7 +186,7 @@ header nav a {
     mask-size: 100% auto;
     mask-repeat: no-repeat;
     transition: background 1s ease-in-out;
-}
+} */
 
 .carousel .list .item .content {
     width: 1140px;
@@ -216,8 +299,36 @@ header nav a {
 }
 
 /* responsive */
-@media screen and (max-width: 767px) {
+
+/* @media (max-width: 550px) {
     .carousel {
+        display: none;  Oculta o carrossel em telas menores que 550px 
+    }
+    
+    /* Ajuste geral para outros elementos 
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card .imgBox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .projeto p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+     .carousel {
         height: 100vh;
     }
 
@@ -248,7 +359,127 @@ header nav a {
     .arrows button {
         top: unset;
         bottom: 20px;
+    } 
+    .carousel{
+        display: none;
     }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #005C4B;
+        width: 50%;
+        border-radius: 15px;
+        filter: drop-shadow(7px 3px 6px #000);
+    }
+} */
+
+@media (max-width: 768px) {
+
+    /* Redução da logo para telas menores */
+    header .logo img {
+        height: 80px;
+        /* Tamanho da logo ajustado para telas menores */
+    }
+
+    /* Centralizar e ajustar navbar em telas menores */
+    header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        /* Remove margin para centralizar a navbar */
+        width: 100%;
+        /* Navbar ocupa a largura total */
+    }
+
+    /* Ajuste no header */
+    header {
+        flex-direction: column;
+        /* Muda o layout para coluna para melhor alinhamento em telas pequenas */
+        height: auto;
+        padding: 20px;
+        /* Aumenta o padding em telas menores */
+    }
+
+    /* Ajuste nos projetos */
+    .projeto {
+        margin: 20px 10px;
+        /* Reduz a margem em telas pequenas */
+        flex-direction: column;
+        /* Alinha projetos em coluna para evitar sobreposição */
+        height: auto;
+    }
+
+    /* Ajustes para evitar que a navbar fique muito próxima da borda */
+    nav {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    /* Reduz o tamanho dos elementos do carrossel */
+    .carousel {
+        height: 400px;
+        /* Reduz altura do carrossel em telas menores */
+    }
+
+    /* Reduz o tamanho das fontes no carrossel */
+    .carousel .list .item .info .title {
+        font-size: 3em;
+        /* Reduz título do carrossel */
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* Oculta o carrossel em telas menores que 550px */
+    .carousel {
+        display: none;
+    }
+
+    /* Ajusta geral para outros elementos */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card .imgBox img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Reduzir o tamanho da logo em 50% */
+    #title img {
+        width: 50%;
+        /* Reduz a largura da logo para 50% */
+        height: auto;
+        /* Mantém a proporção da imagem */
+    }
+
+    /* Ajustar espaçamento do texto em .projeto p */
+    .projeto p {
+        margin-top: 20px;
+        /* Adiciona um espaçamento maior no topo */
+        margin-bottom: 20px;
+        /* Adiciona um espaçamento maior na parte inferior */
+        font-size: 0.9em;
+        /* Ajusta o tamanho da fonte, se necessário */
+    }
+}
+
+/* Espaçamento extra para .projeto p em telas maiores */
+.projeto p {
+    margin-top: 20px;
+    /* Garantindo espaçamento extra acima */
+    margin-bottom: 20px;
+    /* Garantindo espaçamento extra abaixo */
+
 }
 
 /* effect */
@@ -478,16 +709,20 @@ body::-webkit-scrollbar-thumb {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 40px 0; /* Pode adicionar um pouco mais de padding se necessário */
+    padding: 40px 0;
+    /* Pode adicionar um pouco mais de padding se necessário */
 }
 
 canvas {
-    background-color: #fff; /* Adicione um fundo para visualização */
+    background-color: #fff;
+    /* Adicione um fundo para visualização */
 }
 
 .chart-section canvas {
-    width: 100%; /* Ajusta à largura do contêiner */
-    height: 400px; /* Define uma altura fixa */
+    width: 100%;
+    /* Ajusta à largura do contêiner */
+    height: 400px;
+    /* Define uma altura fixa */
 }
 
 
