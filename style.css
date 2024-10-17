@@ -444,7 +444,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 80px;
     }
 
     .card {
@@ -467,7 +467,7 @@ body {
 
     /* Ajustar espaçamento do texto em .projeto p */
     .projeto p {
-        margin-top: 50px;
+        margin-top: 90px;
         /* Adiciona um espaçamento maior no topo */
         margin-bottom: 100px;
         /* Adiciona um espaçamento maior na parte inferior */
