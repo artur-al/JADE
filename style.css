@@ -404,7 +404,7 @@ body {
 
     /* Ajuste nos projetos */
     .projeto {
-        margin: 20px 10px;
+        margin: 80px 50px;
         /* Reduz a margem em telas pequenas */
         flex-direction: column;
         /* Alinha projetos em coluna para evitar sobreposição */
@@ -462,9 +462,9 @@ body {
 
     /* Ajustar espaçamento do texto em .projeto p */
     .projeto p {
-        margin-top: 10px;
+        margin-top: 50px;
         /* Adiciona um espaçamento maior no topo */
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         /* Adiciona um espaçamento maior na parte inferior */
         font-size: 0.9em;
         /* Ajusta o tamanho da fonte, se necessário */
